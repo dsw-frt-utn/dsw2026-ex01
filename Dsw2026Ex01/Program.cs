@@ -1,3 +1,4 @@
+using Dsw2026Ex01.Views;
 using Dsw2026Ex1.Data;
 using Dsw2026Ex1.Views;
 
@@ -11,9 +12,11 @@ namespace Dsw2026Ex01
         [STAThread]
         static void Main()
         {
+            ApplicationConfiguration.Initialize();
             Persistencia.InicializarDatos();
-            ConsoleView consoleView = new ConsoleView();
-            consoleView.DibujarMenu();
+            //ConsoleView consoleView = new ConsoleView();
+            //consoleView.DibujarMenu();
+            Application.Run(new ListarVehiculosView());
         }
     }
 }
