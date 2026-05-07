@@ -17,8 +17,8 @@
 
         public void MostrarConsumos(double electricos, double combustible)
         {
-            lblTotalCombustible.Text = $"{combustible:N2}";
-            lblTotalElectricos.Text = $"{electricos:N2}";
+            lblTotalElectricos.Text = $"{electricos:N2} kWh";
+            lblTotalCombustible.Text = $"{combustible:N2} Litros";
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
