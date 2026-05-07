@@ -1,4 +1,4 @@
-﻿namespace Dsw2026Ex1.Views;
+﻿namespace Dsw2026Ex01.Views;
 
 public class ConsoleView
 {

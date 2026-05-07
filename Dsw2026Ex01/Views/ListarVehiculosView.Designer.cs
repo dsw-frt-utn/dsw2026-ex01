@@ -140,7 +140,7 @@
             // 
             // vehiculoViewModelBindingSource
             // 
-            vehiculoViewModelBindingSource.DataSource = typeof(Dsw2026Ex1.Views.VehiculoViewModel);
+            vehiculoViewModelBindingSource.DataSource = typeof(Dsw2026Ex01.Views.VehiculoViewModel);
             // 
             // pConsumos
             // 

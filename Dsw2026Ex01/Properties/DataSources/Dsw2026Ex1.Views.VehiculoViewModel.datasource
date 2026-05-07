@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="VehiculoViewModel" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-  <TypeInfo>Dsw2026Ex1.Views.VehiculoViewModel, Dsw2026Ex01, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+  <TypeInfo>Dsw2026Ex01.Views.VehiculoViewModel, Dsw2026Ex01, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>
