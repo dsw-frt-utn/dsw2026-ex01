@@ -1,13 +1,4 @@
-﻿using Dsw2026Ex01.Views;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-
-namespace Dsw2026Ex01.Views
+﻿namespace Dsw2026Ex01.Views
 {
     public partial class ListarVehiculosView : Form
     {
@@ -34,7 +25,7 @@ namespace Dsw2026Ex01.Views
         {
             var vehiculos = vehiculoViewModelBindingSource.List as List<VehiculoViewModel> ?? [];
             var vehiculosDict = new Dictionary<string, double>();
-            foreach(var vehiculo in vehiculos)
+            foreach (var vehiculo in vehiculos)
             {
                 vehiculosDict.Add(vehiculo.Patente, vehiculo.KmARecorrer);
             }
