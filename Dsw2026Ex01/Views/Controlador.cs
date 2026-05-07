@@ -1,7 +1,7 @@
-﻿using Dsw2026Ex1.Data;
-using Dsw2026Ex1.Domain;
+﻿using Dsw2026Ex01.Data;
+using Dsw2026Ex01.Domain;
 
-namespace Dsw2026Ex1.Views;
+namespace Dsw2026Ex01.Views;
 
 public class Controlador
 {

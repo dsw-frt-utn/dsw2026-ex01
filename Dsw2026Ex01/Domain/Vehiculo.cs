@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dsw2026Ex1.Domain;
+﻿namespace Dsw2026Ex01.Domain;
 
 public abstract class Vehiculo
 {

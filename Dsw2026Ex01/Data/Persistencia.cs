@@ -1,9 +1,6 @@
-﻿using Dsw2026Ex1.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Dsw2026Ex01.Domain;
 
-namespace Dsw2026Ex1.Data;
+namespace Dsw2026Ex01.Data;
 
 public class Persistencia
 {
