@@ -82,7 +82,7 @@ namespace Dsw2026Ex01
             Console.ReadLine();
 
             Console.WriteLine("\n╔═══════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║  FIN DE LA DEMOSTRACIÓN - Iniciando interfaz gráfica...   ║");
+            Console.WriteLine("║                 FIN DE LA DEMOSTRACIÓN                    ║");
             Console.WriteLine("╚═══════════════════════════════════════════════════════════╝\n");
             Console.WriteLine("Presiona Enter para abrir la ventana...");
             Console.ReadLine();
