@@ -9,6 +9,7 @@ public abstract class Vehiculo
     public double CapacidadCarga { get; init; }
     public Sucursal Sucursal { get; init; }
     public VehiculoTipo Tipo { get; init; }
+    public List<string> Choferes { get; private set; } = [];
 
     protected Vehiculo(VehiculoTipo tipo, string patente, string marca, string modelo, int anio, double capacidadCarga, Sucursal sucursal)
     {
@@ -26,6 +27,14 @@ public abstract class Vehiculo
     public bool EsDe(VehiculoTipo tipo)
     {
         return Tipo == tipo;
+    }
+
+    public void AgregarChoferes(string[] choferes)
+    {
+        foreach(var chofer in choferes)
+        {
+            Choferes.Add(chofer.ToUpper());
+        }
     }
 
     public override string ToString()

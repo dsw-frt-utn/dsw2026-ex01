@@ -51,6 +51,11 @@ public class Persistencia
         return Vehiculos.Find(v => v.Patente == patente);
     }
 
+    public static List<Sucursal> GetSucursales()
+    {
+        return Sucursales;
+    }
+
     public static void InicializarDatos()
     {
         InicializarResponsables();

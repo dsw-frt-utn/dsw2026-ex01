@@ -12,6 +12,15 @@ public class Controlador
         _vista = vista;
     }
 
+    //Solo para ejemplificar params arrays
+    public void AgregarChoferes()
+    {
+        var sucursal = Persistencia.GetSucursales()[0];
+        var electrico = new VehiculoElectrico("AA000AA", "Ford", "E-Transit", 2021, 1200, sucursal, 14);
+        var choferes = new[] { "Juan", "Luis", "Pedro" };
+        electrico.AgregarChoferes(choferes);
+    }
+
     public void ListarVehiculos()
     {
         List<VehiculoViewModel> vehiculos = [];
