@@ -1,6 +1,6 @@
 ﻿namespace Dsw2026Ex01.Domain;
 
-public abstract class Vehiculo
+public abstract class Vehiculo : EntidadBase
 {
     public string Patente { get; init; }
     public string Marca { get; init; }
@@ -11,7 +11,8 @@ public abstract class Vehiculo
     public VehiculoTipo Tipo { get; init; }
     public List<string> Choferes { get; private set; } = [];
 
-    protected Vehiculo(VehiculoTipo tipo, string patente, string marca, string modelo, int anio, double capacidadCarga, Sucursal sucursal)
+    protected Vehiculo(VehiculoTipo tipo, string patente, string marca, string modelo, int anio, 
+        double capacidadCarga, Sucursal sucursal, Guid? id = null): base(id)
     {
         Patente = patente;
         Marca = marca;

@@ -14,6 +14,9 @@ namespace Dsw2026Ex01
         {
             Persistencia.InicializarDatos();
 
+            var vehiculo = Persistencia.GetEntidad<Vehiculo>(new Guid("B3BBB9CA-072F-47A2-8CA1-A0105B155BF9"));
+            Console.WriteLine("Vehículo Patente: {0}", vehiculo?.Patente);
+
             #region Escenario 0
             //Console.WriteLine("Escenario #0: Crear nuevo viaje");
             //var viaje = new Viaje

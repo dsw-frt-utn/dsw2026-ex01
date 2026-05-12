@@ -1,6 +1,6 @@
 ﻿namespace Dsw2026Ex01.Domain;
 
-public class Sucursal
+public class Sucursal : EntidadBase
 {
     public string Codigo { get; init; }
     public string Direccion { get; init; }

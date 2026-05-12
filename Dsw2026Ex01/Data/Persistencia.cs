@@ -7,6 +7,8 @@ public class Persistencia
     private static readonly List<Sucursal> Sucursales = new List<Sucursal>();
     private static readonly List<Vehiculo> Vehiculos = new List<Vehiculo>();
     private static readonly List<Responsable> Responsables = new List<Responsable>();
+    
+    private static readonly List<EntidadBase> Datos = [];
 
     private static void InicializarResponsables()
     {
@@ -29,11 +31,12 @@ public class Persistencia
     {
         Sucursal s1 = Sucursales[0];
         Sucursal s2 = Sucursales[1];
-
-        VehiculoElectrico v1 = new VehiculoElectrico("AE123FG", "Renault", "Kangoo E-Tech", 2020, 1000, s1, 16);
-        VehiculoElectrico v2 = new VehiculoElectrico("AF456HI", "Ford", "E-Transit", 2021, 1300, s2, 16);
-
-        VehiculoCombustible v3 = new VehiculoCombustible("AC789JK", "Iveco", "Daily", 2023, 1200, s1, 8, 1.5);
+        var id = new Guid("DD0A4A95-8ED7-4CFB-ACC7-C2BAC23AB54C");
+        VehiculoElectrico v1 = new VehiculoElectrico("AE123FG", "Renault", "Kangoo E-Tech", 2020, 1000, s1, 16, id);
+        id = new Guid("B3BBB9CA-072F-47A2-8CA1-A0105B155BF9");
+        VehiculoElectrico v2 = new VehiculoElectrico("AF456HI", "Ford", "E-Transit", 2021, 1300, s2, 16, id);
+        id = new Guid("E09F407F-22A3-42F8-A114-5079FD4F999D");
+        VehiculoCombustible v3 = new VehiculoCombustible("AC789JK", "Iveco", "Daily", 2023, 1200, s1, 8, 1.5, id);
         VehiculoCombustible v4 = new VehiculoCombustible("AD321LM", "Mercedes", "Sprinter", 2020, 1200, s2, 7, 1);
 
         Vehiculos.Add(v1);
@@ -41,6 +44,7 @@ public class Persistencia
         Vehiculos.Add(v3);
         Vehiculos.Add(v4);
     }
+   
     public static List<Vehiculo> GetVehiculos()
     {
         return Vehiculos;
@@ -56,10 +60,18 @@ public class Persistencia
         return Sucursales;
     }
 
+    public static T? GetEntidad<T>(Guid id) where T: EntidadBase
+    {
+        return Datos.Find(v => v.Id == id) as T;
+    }
+
     public static void InicializarDatos()
     {
         InicializarResponsables();
         InicializarSucursales();
         InicializarVehiculos();
+        Datos.AddRange(Vehiculos);
+        Datos.AddRange(Responsables);
+        Datos.AddRange(Sucursales);
     }
 }

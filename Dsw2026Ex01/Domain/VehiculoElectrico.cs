@@ -5,7 +5,8 @@ public class VehiculoElectrico : Vehiculo
     public double KwhBase { get; init; }
 
     public VehiculoElectrico(string patente, string marca, string modelo, int anio, double capacidadCarga, 
-        Sucursal sucursal, double kwhBase) : base(VehiculoTipo.Electrico, patente, marca, modelo, anio, capacidadCarga, sucursal)
+        Sucursal sucursal, double kwhBase, Guid? id = null) : base(VehiculoTipo.Electrico, patente, marca, 
+            modelo, anio, capacidadCarga, sucursal, id)
     {
         KwhBase = kwhBase;
     }

@@ -1,6 +1,6 @@
 ﻿namespace Dsw2026Ex01.Domain;
 
-public class Responsable
+public class Responsable : EntidadBase
 {
     public string Nombre { get; init; }
     public string Documento { get; init; }

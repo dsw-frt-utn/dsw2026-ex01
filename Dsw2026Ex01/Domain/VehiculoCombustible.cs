@@ -6,7 +6,8 @@ public class VehiculoCombustible: Vehiculo
     public double LitrosExtra { get; init; }
 
     public VehiculoCombustible(string patente, string marca, string modelo, int anio, double capacidadCarga, 
-        Sucursal sucursal, double kilometrosPorLitro, double litrosExtra) : base(VehiculoTipo.Combustible, patente, marca, modelo, anio, capacidadCarga, sucursal)
+        Sucursal sucursal, double kilometrosPorLitro, double litrosExtra, Guid? id = null) : base(VehiculoTipo.Combustible, 
+            patente, marca, modelo, anio, capacidadCarga, sucursal, id)
     {
         KilometrosPorLitro = kilometrosPorLitro;
         LitrosExtra = litrosExtra;
