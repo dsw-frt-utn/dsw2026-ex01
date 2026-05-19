@@ -12,6 +12,10 @@ namespace Dsw2026Ex01
         //[STAThread]
         static void Main()
         {
+            var operaciones = new Operaciones();
+            var resultado = operaciones.RealizarOperacion(operaciones.Sumar);
+
+
             Persistencia.InicializarDatos();
 
             var vehiculo = Persistencia.GetEntidad<Vehiculo>(new Guid("B3BBB9CA-072F-47A2-8CA1-A0105B155BF9"));
@@ -68,6 +72,10 @@ namespace Dsw2026Ex01
             #endregion
 
             Console.ReadLine();
+        }
+        static int Restar(int numero1, int numero2)
+        {
+            return numero1 - numero2;
         }
     }
 }

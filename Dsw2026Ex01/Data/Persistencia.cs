@@ -52,12 +52,11 @@ public class Persistencia
 
     public static Vehiculo? GetVehiculo(string patente)
     {
-        foreach(Vehiculo vehiculo in Vehiculos)
+        return Vehiculos.Find((Vehiculo v) =>
         {
-            if(vehiculo.Patente == patente)
-                return vehiculo;
-        }
-        return null;
+            return v.Patente == patente;
+        });
+        return Vehiculos.Find(v => v.Patente == patente);
     }
 
     public static List<Sucursal> GetSucursales()
@@ -83,5 +82,10 @@ public class Persistencia
         Datos.AddRange(Vehiculos);
         Datos.AddRange(Responsables);
         Datos.AddRange(Sucursales);
+    }
+
+    public static bool BuscarPorPatente(Vehiculo vehiculo)
+    {
+        return vehiculo.Patente == "";
     }
 }
