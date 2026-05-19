@@ -52,7 +52,12 @@ public class Persistencia
 
     public static Vehiculo? GetVehiculo(string patente)
     {
-        return Vehiculos.Find(v => v.Patente == patente);
+        foreach(Vehiculo vehiculo in Vehiculos)
+        {
+            if(vehiculo.Patente == patente)
+                return vehiculo;
+        }
+        return null;
     }
 
     public static List<Sucursal> GetSucursales()
@@ -62,7 +67,12 @@ public class Persistencia
 
     public static T? GetEntidad<T>(Guid id) where T: EntidadBase
     {
-        return Datos.Find(v => v.Id == id) as T;
+        foreach(EntidadBase entidad in Datos)
+        {
+            if (entidad.Id == id)
+                return entidad as T;
+        }
+        return default;
     }
 
     public static void InicializarDatos()
